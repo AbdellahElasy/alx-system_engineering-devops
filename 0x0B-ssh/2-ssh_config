@@ -1,0 +1,7 @@
+ForwardAgent yes
+Host ubuntu@35.174.204.43
+    HostName 35.174.204.43  # Replace with your server's IP or hostname
+    User ubuntu   # Replace with your SSH username
+    IdentityFile ~/.ssh/school
+    PreferredAuthentications publickey
+    PasswordAuthentication no
