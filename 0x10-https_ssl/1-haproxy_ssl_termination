@@ -1,10 +1,12 @@
-frontend www-https
+#!/usr/bin/env bash
+
+frontend abde_frontend_https
         bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/www.abdeblog.tech.pem
         redirect scheme https code 301 if !{ ssl_fc }
         default_backend www-backend
 
-backend www-backend
+backend abde_backend
         balance roundrobin
         server 328201-web-01 35.174.204.43 check
         server 328201-web-02 54.90.25.48 check
